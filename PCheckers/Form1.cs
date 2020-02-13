@@ -313,10 +313,12 @@ namespace PCheckers
         {
             for (int i = 0; i < possibleMoves.Length; i++)
             {
-                if (pieces[lastSelected].CanMoveOrEat(possibleMoves[i].Name, pieces) != ACTION.DENY)//Se in quella posizione è permesso muoversi
+                ACTION action = pieces[lastSelected].CanMoveOrEat(possibleMoves[i].Name, pieces);
+                if ( action != ACTION.DENY)//Se in quella posizione è permesso muoversi
                 {
                     possibleMoves[i].Name = Pedina.GetCoordsFromLocation(possibleMoves[i].Location, possibleMoves[i].Size, picChessBoard.Location);
                     possibleMoves[i].BringToFront();
+                    possibleMoves[i].BackColor = (action == ACTION.MOVE ? Color.FromArgb(200, 50, 255, 0) : Color.DarkRed);
                     possibleMoves[i].Show();
                 }
                 else

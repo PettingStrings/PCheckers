@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17757AD6-7A3E-45D7-951E-2C77A4840220}</ProjectGuid>
+    <ProjectGuid>{6F995590-192B-42B8-BAA7-6C50C59FCA1E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PCheckers</RootNamespace>
-    <AssemblyName>PCheckers</AssemblyName>
+    <RootNamespace>Checkers</RootNamespace>
+    <AssemblyName>Checkers</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Pedina.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,7 +71,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bin\Debug\PCheckers.exe.config" />
+    <None Include="bin\Debug\Checkers.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,9 +86,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\assets\WORKS.txt" />
-    <Content Include="bin\Debug\PCheckers.exe" />
-    <Content Include="bin\Debug\PCheckers.pdb" />
+    <Content Include="bin\Debug\assets\checker1.gif" />
+    <Content Include="bin\Debug\assets\checker2.gif" />
+    <Content Include="bin\Debug\assets\checkerBlack.png" />
+    <Content Include="bin\Debug\assets\checkerWhite.png" />
+    <Content Include="bin\Debug\assets\Checker_Dance_Deltarune.wav" />
+    <Content Include="bin\Debug\assets\deltarune_battle_bg.jpg" />
+    <Content Include="bin\Debug\assets\pedina_bianca.png" />
+    <Content Include="bin\Debug\assets\pedina_nera.png" />
+    <Content Include="bin\Debug\assets\scacchiera.png" />
+    <Content Include="bin\Debug\Checkers.exe" />
+    <Content Include="bin\Debug\Checkers.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
